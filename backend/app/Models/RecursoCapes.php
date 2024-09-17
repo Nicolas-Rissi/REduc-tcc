@@ -17,8 +17,8 @@ class RecursoCapes extends Model
         'id_areaconhecimento'
     ];
 
-    public function recursos()
+    public function areaConhecimento()
     {
-
+        return $this->hasOne(AreaConhecimento::class, 'id_areaconhecimento', 'id_areaconhecimento');
     }
 }

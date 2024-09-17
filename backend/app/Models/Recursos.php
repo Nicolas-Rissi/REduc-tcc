@@ -29,8 +29,18 @@ class Recursos extends Model
         'status' => 'bool'
     ];
 
-    public function capes()
+    public function recursoCapes()
     {
+        return $this->hasMany(RecursoCapes::class, 'id_recurso', 'id_recurso');
+    }
 
+    public function recursoCursos()
+    {
+        return $this->hasMany(RecursoCurso::class, 'id_recurso', 'id_recurso');
+    }
+
+    public function recursoDisciplinas()
+    {
+        return $this->hasMany(RecursoDisciplina::class, 'id_recurso', 'id_recurso');
     }
 }

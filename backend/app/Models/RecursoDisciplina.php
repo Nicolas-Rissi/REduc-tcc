@@ -16,4 +16,9 @@ class RecursoDisciplina extends Model
         'id_recurso',
         'id_disciplina'
     ];
+
+    public function disciplina()
+    {
+        return $this->hasOne(Disciplinas::class, 'id_disciplina', 'id_disciplina');
+    }
 }

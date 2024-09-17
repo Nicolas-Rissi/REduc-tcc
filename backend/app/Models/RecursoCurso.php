@@ -16,4 +16,9 @@ class RecursoCurso extends Model
         'id_recurso',
         'id_curso'
     ];
+
+    public function curso()
+    {
+        return $this->hasOne(Cursos::class, 'id_curso', 'id_curso');
+    }
 }
